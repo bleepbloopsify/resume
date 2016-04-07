@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.5)  6 APR 2016 21:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.5)  6 APR 2016 22:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -61,7 +61,7 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 )
 
 LaTeX Warning: Unused global option(s):
-    [14].
+    [14,.75in].
 
 (/home/leon/Documents/latex/resume/resume.aux)
 \openout1 = `resume.aux'.
@@ -88,11 +88,11 @@ LaTeX Font Info:    ... okay on input line 7.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(54.2025pt, 505.89pt, 54.2025pt)
-* v-part:(T,H,B)=(54.2025pt, 686.56499pt, 54.2025pt)
+* v-part:(T,H,B)=(54.2025pt, 704.63249pt, 36.135pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
 * \textwidth=505.89pt
-* \textheight=686.56499pt
+* \textheight=704.63249pt
 * \oddsidemargin=-18.06749pt
 * \evensidemargin=-18.06749pt
 * \topmargin=-55.06749pt
@@ -132,15 +132,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--60
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (/home/leon/Documents/latex/resume/resume.aux) ) 
 Here is how much of TeX's memory you used:
- 1055 strings out of 493085
- 15746 string characters out of 6136918
- 78130 words of memory out of 5000000
- 4593 multiletter control sequences out of 15000+600000
+ 1057 strings out of 493085
+ 15765 string characters out of 6136918
+ 78168 words of memory out of 5000000
+ 4595 multiletter control sequences out of 15000+600000
  5206 words of font info for 19 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 24i,4n,32p,155b,132s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 25i,4n,32p,155b,132s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on /home/leon/Documents/latex/resume/resume.pdf (1 page, 69398 bytes).
+Output written on /home/leon/Documents/latex/resume/resume.pdf (1 page, 69522 bytes).
 PDF statistics:
  24 PDF objects out of 1000 (max. 8388607)
  16 compressed objects within 1 object stream

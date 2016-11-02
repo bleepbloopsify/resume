@@ -1,5 +1,5 @@
 */**
-!*.cls
-!*.tex
-!*.pdf
+!**.cls
+!**.tex
+!**.pdf
 !.gitignore

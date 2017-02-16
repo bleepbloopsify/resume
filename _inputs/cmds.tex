@@ -1,29 +1,28 @@
-\usepackage{enumitem}
 \renewcommand{\section}[2][]{%
 \noindent{\large \textbf{#2}}\hfill \textit{#1}
 \vspace{0.08in} \hrule \vspace{0.1in}}
 
-\renewcommand{\educationentry}[3][]{
+\newcommand{\educationentry}[3][]{
 \noindent\makebox[1in][l]{#1}
 \hspace{25px}\makebox[0.8in][l]{\textbf{#2}}
 \hspace{27px}
 \hfill#3}
 
-\renewcommand{\entrytitle}[3][]{% #1 is date, #2 is entry title
+\newcommand{\entrytitle}[3][]{% #1 is date, #2 is entry title
 \noindent\makebox[1in][l]{#1}
 \hspace{25px}\makebox[1.2in][l]{\textbf{#2}}
 \hspace{27px}
 \makebox[\linegoal][l]{\raggedleft#3}}
 
 \usepackage{linegoal}
-\renewcommand{\entrydetail}[3][]{%
+\newcommand{\entrydetail}[3][]{%
 \noindent\makebox[1in][l]{#1}
 \hspace{25px}\makebox[1.2in][l]{\textit{#2}}
 \hspace{27px}
 \makebox[\linegoal][l]{\raggedleft#3}
 }
 
-\renewcommand{\awardentry}[2]{
+\newcommand{\awardentry}[2]{
 \makebox[1in][l]{\textbf{#1}}
 \hspace{25px}
 \makebox[\linegoal][l]{

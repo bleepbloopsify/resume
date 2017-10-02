@@ -1,59 +1,118 @@
 \documentclass[11pt, letter, sans]{moderncv}
-\linespread{1.5}
+\linespread{1.25}
 \usepackage[margin=0.5in]{geometry}
+\usepackage{tabu}
+\usepackage{array}
+% \usepackage{glue}
 \pagestyle{empty}
 
 \moderncvstyle{classic}
 \moderncvcolor{black}
 
+
+\renewcommand{\section}[1]{%
+\Large{\textbf{#1}} \dotfill}
+
+\newcommand{\timeframe}[2]{%
+\textit {#1 - #2}}
+
+
+
 \name{Leon}{Chou}
 \social[github]{github.com/bleepbloopsify}
 \email{leon.chou@nyu.edu}
-\homepage{bleepbloopsify.github.io}
+\phone[mobile]{+1~(917)~691~0038}
+% \homepage{bleepbloopsify.github.io}
 
-\input{../_inputs/cmds.tex}
 
-\begin{document}
+\begin {document}
 \makecvtitle
+
 \vspace{-0.5in}
-\relax
-% Section detailing educations
-\section[GPA 3.5/4.0]{Education}
-\educationentry[2016-Present]{New York University}{B.S., M.S. Computer Science, Anticipated May 2020}\\
-\educationentry[2012-2016]{Stuyvesant High School}{Studied AP Computer Science, Software Development}\\
-\entrydetail[]{Computer Science}{\hfill Spent 3 years studying web development with frameworks}
-\relax
 \section{Experience}
-\entrytitle[Jan 2017-Present]{CoHouse}{Rent Management - Web Development}\\
-\entrydetail[Remote]{Software Engineer}{Creating classes in Django to create functionality for service}\\
-\entrytitle[Jan 2017-Present]{NYU}{Python Data Structures and Algorithms - Student Mentor}
-\entrydetail[Brooklyn, NY]{Teacher Assistant}{Affluence in Python lets me assist fellow classmates}
-\entrytitle[Jun 2016-Dec 2016]{HULEDET}{Product Advertisement - Web Development and Scripting}\\
-\entrydetail[Manhattan, NY]{Lead Engineer}{Wrote scripts and automations to manage large MailChimp lists}\\
-\entrydetail{Software Intern}{Updated front end for website, successfully restructured MySQL db}\\
+
+\renewcommand{\arraystretch}{1.0}
+\begin{center}
+\begin{tabu} to 0.8\textwidth{ p{0.25\textwidth} p{0.05\textwidth} p{0.7\textwidth} }
+  \textbf{OSIRIS Lab} \vfill
+  Cybersecurity \vfill
+  \timeframe{Jan. 2017}{present} \vfill
+  & &
+  Part of a research lab supervised by
+  Professor Brendan Dolan-Gavitt to study cybersecurity. Major role in the lab is
+  full-stack web development and infrastructure, as well as CTFs.
+  \\[-10pt]
+  \textbf{Teaching Assistant} \vfill
+  Data Structures \vfill
+  \timeframe{Jan. 2017}{present} \vfill
+  & &
+  Working under Professor John Iacono to
+  teach data structures in Python 3 to college freshmen.
+  \\[-10pt]
+  \textbf{Teaching Assistant} \vfill
+  OOP \vfill
+  \timeframe{Jan. 2017}{present} \vfill
+  & &
+   Working under Professor John
+  Sterling to teach class inheritance and data hiding in C++.
+  \\[-10pt]
+  \textbf{Full-Stack} \vfill
+  Web UX/UI \vfill
+  \timeframe{Jan.}{Aug. 2017}
+  & &
+  Worked for CoHouse, a service that connected landowners to people looking for places to
+  rent. Framework used Python Django.
+\end{tabular}
+\end{center}
+
+
 \section{Projects}
-\entrytitle[Jan 2016-Jun 2016]{Absence Note}{Physical Paperwork to Electronic Form for School Client}\\
-\entrydetail[Manhattan, NY]{Backend Establishment}{Established a schematic to correlate different types of accounts}\\
-\entrydetail[]{Middleware/Framework}{Enforced fluidity in transitioning raw data to user displays}\\
-\entrytitle[Jan 2016-Mar 2016]{ELWire}{Programmable props for performance}\\
-\entrydetail[Manhattan, NY]{Programming}{Developed program to extend functionality of suits}\\
-\entrydetail[]{Prop Management}{Successfully repaired and maintained working order}\\
-\entrytitle[Jan 2016-Mar 2016]{Nutritrades}{Food Exchange Service for Dream it.Code it.Win it. hackathon}\\
-\entrydetail[Manhattan, NY]{Backend Developer}{Created a system to catalog products and display them appropriately}\\
-\entrydetail[]{UX Developer}{Formed a standard for directory structure in the application}\\
-\relax
-\section{Skills}
-\entrydetail[Communication]{Read/Speak}{English, Chinese}
-\entrydetail[Programming]{Languages}{Node.js/JavaScript, PHP, Python, HTML/CSS, Java, C/C++, \LaTeX}\\
-\entrydetail[]{Frameworks}{Express, Koa, Flask, React, Babel, Gulp, MySQL, MongoDB}\\
-\entrydetail[]{Software}{Excel, Word, Powerpoint, LabVIEW }\\
-\relax
-\section{Awards}
-\entrytitle[Jun 2014 and 2016]{First Place}{Brooklyn Youth String Competition}\\
-\entrytitle[Jun 2015]{First Place}{Brooklyn College Concerto Competition}\\
-\entrytitle[Mar 2015 and 2016]{Microsoft Award}{Dream it. Code it. Win it. MIT hosted hackathon}\\
-% \entrytitle[Feb 2016]{Best Webapp}{CodeDay Hackathon hosted by CSTUY}\\
-% \entrytitle[Dec 2015]{Best Social Hack}{StuyHacks Hackathon hosted by CSTUY}\\
-% \entrytitle[Oct 2015]{Best Design}{DefHacks Hackathon hosted by CSTUY}\\
-\relax
+
+\renewcommand{\arraystretch}{1.0}
+\begin{center}
+\begin{tabu} to 0.8\textwidth{ p{0.25\textwidth} p{0.05\textwidth} p{0.7\textwidth} }
+  \textbf{\textit{justcats}} \vfill
+  CTFd Plugin \vfill
+  \textit{Sep. 2017} \vfill
+  & &
+  Drop and use plugin for CTFd to display categories in challenge style and
+  render challenges as per usual. Example of the React framework and hooks
+  onto Flask.
+  \\[-10pt]
+  \textbf{\textit{fluid}} \vfill
+  Kinect 2.0 wrapper \vfill
+  \timeframe{Sep.}{Dec. 2016} \vfill
+  & &
+  Python pygame shell to track, store, and playback data from the new Kinect.
+  Stores body structuring data and replays back detailed
+  body movements mapped to variable body types.
+\end{tabular}
+\end{center}
+
+
+\Large \textbf{tl;dr} \backslash\backslash \hspace{10pt} \textit{too long; didn't read} \dotfill
+
+\renewcommand{\arraystretch}{0.2}
+\linespread{0.5}
+\begin{center}
+\begin{tabu} to 0.8\textwidth{ p{0.25\textwidth} p{0.05\textwidth} p{0.7\textwidth} }
+  \textbf{Languages} \vfill
+  & &
+  Python 2/3, JavaScript, C++, PHP, Go\\[-10pt]
+  \textbf{Education} \vfill
+  Relevant Courses \vfill
+  & &
+  New York University, Stuyvesant High School
+  Data Structures, Offensive Security, Binary Analysis, Object Oriented
+  Programming, Computer Architecture \\[-5pt] \\[5pt] % What the fuck 
+  Languages \vfill
+  & &
+  English, Chinese(Native Speaker)\\[-10pt]
+  Hobbies \vfill
+  & &
+  Fire Spinning, CTF Competing, Chess\\[-10pt]
+\end{tabular}
+\end{center}
+
+
 \end{document}

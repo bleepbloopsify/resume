@@ -1,118 +1,174 @@
-\documentclass[11pt, letter, sans]{moderncv}
-\linespread{1.25}
-\usepackage[margin=0.5in]{geometry}
-\usepackage{tabu}
-\usepackage{array}
-% \usepackage{glue}
-\pagestyle{empty}
+\documentclass[letterpaper,10pt]{article}
 
-\moderncvstyle{classic}
-\moderncvcolor{black}
-
-
-\renewcommand{\section}[1]{%
-\Large{\textbf{#1}} \dotfill}
-
-\newcommand{\timeframe}[2]{%
-\textit {#1 - #2}}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
 
 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-\name{Leon}{Chou}
-\social[github]{github.com/bleepbloopsify}
-\email{leon.chou@nyu.edu}
-\phone[mobile]{+1~(917)~691~0038}
-% \homepage{bleepbloopsify.github.io}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
+\urlstyle{same}
 
-\begin {document}
-\makecvtitle
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 
-\vspace{-0.5in}
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-12pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\def \myemail {leon.chou@nyu.edu}
+\def \mywebsite {http://bleepbloopsify.github.io}
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{\mywebsite}{\Large Leon Chou}} & Email : \href{mailto:\myemail}{\myemail}\\
+  \href{\mywebsite}{\mywebsite} & Mobile : +1-917-691-0038 \\
+\end{tabular*}
+\vspace{-7pt}
+
+\section{Education}
+
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Stuyvesant High School}{New York, NY}
+    {GPA: 3.5}{Sep. 2012 -- May. 2016}
+  \resumeSubheading
+    {NYU University}{New York, NY}
+    {Expected Bachelor of Science in Computer Science; GPA: 3.6}{Sep. 2016 -- May 2020}
+\resumeSubHeadingListEnd
+
 \section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {OSIRIS Lab}{Brooklyn, NY}
+    {Cybersecurity Research Lab}{Jan. 2017 -- Present}
 
-\renewcommand{\arraystretch}{1.0}
-\begin{center}
-\begin{tabu} to 0.8\textwidth{ p{0.25\textwidth} p{0.05\textwidth} p{0.7\textwidth} }
-  \textbf{OSIRIS Lab} \vfill
-  Cybersecurity \vfill
-  \timeframe{Jan. 2017}{present} \vfill
-  & &
-  Part of a research lab supervised by
-  Professor Brendan Dolan-Gavitt to study cybersecurity. Major role in the lab is
-  full-stack web development and infrastructure, as well as CTFs.
-  \\[-10pt]
-  \textbf{Teaching Assistant} \vfill
-  Data Structures \vfill
-  \timeframe{Jan. 2017}{present} \vfill
-  & &
-  Working under Professor John Iacono to
-  teach data structures in Python 3 to college freshmen.
-  \\[-10pt]
-  \textbf{Teaching Assistant} \vfill
-  OOP \vfill
-  \timeframe{Jan. 2017}{present} \vfill
-  & &
-   Working under Professor John
-  Sterling to teach class inheritance and data hiding in C++.
-  \\[-10pt]
-  \textbf{Full-Stack} \vfill
-  Web UX/UI \vfill
-  \timeframe{Jan.}{Aug. 2017}
-  & &
-  Worked for CoHouse, a service that connected landowners to people looking for places to
-  rent. Framework used Python Django.
-\end{tabular}
-\end{center}
+  \resumeSubheading
+    {Object Oriented Programming in C++}{Brooklyn, NY}
+    {Teaching Assistant for Professor Sterling}{Sep. 2017 -- Present}
 
+  \resumeSubheading
+    {CoHouse}{Remote to CA}
+    {Full-Stack web developer}{Jan. 2017 -- Aug. 2017}
+    \resumeItemListStart
+      \resumeItem{Django}{Backend framework in python, created actions and endpoints}
+      \resumeItem{Google Scripts}{Frontend CRM to display onboarding status}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Data Structures in Python3}{Brooklyn, NY}
+    {Teaching Assistant for Professor Iacono}{Jan. 2017 -- May 2017}
+
+  \resumeSubheading
+    {HULEDET}{Manhattan, NY}
+    {Full-Stack Web Development Intern}{May 2016 -- Dec 2016}
+    \resumeItemListStart
+      \resumeItem{PHP/Wordpress}{Full PHP backend refactor, creating actual models to interact with the database to easily regenerate objects}
+      \resumeItem{MySQL}{Refactor backend to work with PDO, to prevent against injection attacks with prepared statements}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 \section{Projects}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {justcats}{CTFD}
+    {Plugin for CTFD to display categories as challenges}{Sep. 2017}
 
-\renewcommand{\arraystretch}{1.0}
-\begin{center}
-\begin{tabu} to 0.8\textwidth{ p{0.25\textwidth} p{0.05\textwidth} p{0.7\textwidth} }
-  \textbf{\textit{justcats}} \vfill
-  CTFd Plugin \vfill
-  \textit{Sep. 2017} \vfill
-  & &
-  Drop and use plugin for CTFd to display categories in challenge style and
-  render challenges as per usual. Example of the React framework and hooks
-  onto Flask.
-  \\[-10pt]
-  \textbf{\textit{fluid}} \vfill
-  Kinect 2.0 wrapper \vfill
-  \timeframe{Sep.}{Dec. 2016} \vfill
-  & &
-  Python pygame shell to track, store, and playback data from the new Kinect.
-  Stores body structuring data and replays back detailed
-  body movements mapped to variable body types.
-\end{tabular}
-\end{center}
+  \resumeSubheading
+    {AD-Tooling}{OSIRIS Lab}
+    {Full Internal tool to interface with other Attack/Defense tools during AD style CTFs}{Sep. 2017 -- Present}
+    \resumeItemListStart
+      \resumeItem{Flask}{Python3 Flask Middleware, allows any import of python tooling and modules to be written, uses global pip on the box to distribute access to webserver models for query at any time.}
+      \resumeItem{SQLAlchemy/MySQL}{MariaDB backend, JSON fields allow for easy packet parsing and querying.}
+      \resumeItem{JSX/React}{Webpack and yarn to package manage and transpile JSX, React to display the tools and provide simple front-end configuration.}
+    \resumeItemListEnd
 
+  \resumeSubheading
+    {notmycupofcoffee}{OSIRIS Lab}
+    {CTF challenge focused on deserializing Java objects}{Sep. 2017}
+    \resumeItemListStart
+      \resumeItem{JSP}{Java Server Pages, exemplified why storing state in frontend is a bad idea, and why debug mode should be turned off.}
+      \resumeItem{Maven}{Java's package manager, quite difficult to get to compile, but managed to pull the packages we needed and have the auto-solver in the same directory anyways.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
 
-\Large \textbf{tl;dr} \backslash\backslash \hspace{10pt} \textit{too long; didn't read} \dotfill
+\section{Skills}
+\resumeSubHeadingListStart
+  \resumeItem{Tooling}{}
+    \resumeItemListStart
+    \resumeItem{GDB}{Debugger for dynamic binary analysis}
+    \resumeItem{IDAPro}{Hexrays analysis of binary programs for ease of code reading}
+    \resumeItem{Binary Ninja}{Decompilation and visual representation of binary programs for ease of code reading}
+    \resumeItem{Wireshark}{pulling packets, analysis of packets in attempt to match its functionality and surpass it}
+    \resumeItemListEnd
+  \resumeItem{Languages}{Programming}
+    \resumeItemListStart
+    \resumeItem{Python3.5/3.6/2.7}{Flask applications, command-line scripts, pwntools, everyday menial tasks, TCP sockets}
+    \resumeItem{Node.JS 6-7}{Web apps, TCP implementations of new web protocols, single page apps with webpack and React}
+    \resumeItem{Bash/Zsh}{Everyday terminal usage, menial QOL scripts, avoiding usage of UIs when dealing with filesystems}
+    \resumeItem{\LaTeX}{Resumes and writeups for CTF challenges}
+    \resumeItem{C/C++}{TA and minor usage for writing challenges, Node Addons}
+    \resumeItem{HTML/CSS/SCSS}{Templating, basic styling, inlined scss with webpack}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
 
-\renewcommand{\arraystretch}{0.2}
-\linespread{0.5}
-\begin{center}
-\begin{tabu} to 0.8\textwidth{ p{0.25\textwidth} p{0.05\textwidth} p{0.7\textwidth} }
-  \textbf{Languages} \vfill
-  & &
-  Python 2/3, JavaScript, C++, PHP, Go\\[-10pt]
-  \textbf{Education} \vfill
-  Relevant Courses \vfill
-  & &
-  New York University, Stuyvesant High School
-  Data Structures, Offensive Security, Binary Analysis, Object Oriented
-  Programming, Computer Architecture \\[-5pt] \\[5pt] % What the fuck 
-  Languages \vfill
-  & &
-  English, Chinese(Native Speaker)\\[-10pt]
-  Hobbies \vfill
-  & &
-  Fire Spinning, CTF Competing, Chess\\[-10pt]
-\end{tabular}
-\end{center}
-
+\section{Relevant Coursework}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Binary Analysis}{NYU}
+      {Using dynamic and static algorithms to analyze binary programs.}{Sep. 2017 -- Present}
+    \resumeSubheading
+      {Data Structures and Algorithms in Python3}{NYU}
+      {Advanced structures and sorting/search algorithms}{Sep. 2016 -- Dec. 2016}
+    \resumeSubheading
+      {Object Oriented Programming in C++}{NYU}
+      {Basic coding principles and good programming practices}{Jan. 2017 -- May. 2017}
+  \resumeSubHeadingListEnd
+% \section{tl;dr}
 
 \end{document}

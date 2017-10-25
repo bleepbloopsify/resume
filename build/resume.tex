@@ -9,7 +9,23 @@
 \usepackage{enumitem}
 \usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
+\usepackage{fontawesome}
 
+\usepackage[familydefault,light]{Chivo} %% Option 'familydefault' only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+% \usepackage[sfdefault]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font
+% \usepackage[T1]{fontenc}
+% \renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
+
+% \usepackage[light,math]{iwona}
+% \usepackage[T1]{fontenc}
+
+% \usepackage{GoMono}
+% \renewcommand*\familydefault{\ttdefault} %% Only if the base font of the document is to be typewriter style
+% \usepackage[T1]{fontenc}
+
+% \fontsize{5pt}{7pt}\selectfont
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -38,6 +54,7 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
+  \vspace{-1pt}
   \item\small{
     \textbf{#1}{: #2 \vspace{-2pt}}
   }
@@ -53,7 +70,8 @@
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
-\renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{\hspace{-4pt}}
+\renewcommand{\labelitemii}{\faMinus}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
@@ -62,25 +80,17 @@
 
 \def \myemail {leon.chou@nyu.edu}
 \def \mywebsite {http://bleepbloopsify.github.io}
+\def \mygithub {http://github.com/bleepbloopsify}
 
 \begin{document}
 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{\mywebsite}{\Large Leon Chou}} & Email : \href{mailto:\myemail}{\myemail}\\
-  \href{\mywebsite}{\mywebsite} & Mobile : +1-917-691-0038 \\
+  \textbf{\href{\mywebsite}{\Large Leon Chou}} &
+  \faGithub \hspace{2px} \href{\mygithub}{bleepbloopsify} \\
+  \href{\mywebsite}{\mywebsite} &
+  \faEnvelopeO \hspace{2px} \href{mailto:\myemail}{\myemail}\\
 \end{tabular*}
 \vspace{-7pt}
-
-\section{Education}
-
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {Stuyvesant High School}{New York, NY}
-    {GPA: 3.5}{Sep. 2012 -- May. 2016}
-  \resumeSubheading
-    {NYU University}{New York, NY}
-    {Expected Bachelor of Science in Computer Science; GPA: 3.6}{Sep. 2016 -- May 2020}
-\resumeSubHeadingListEnd
 
 \section{Experience}
 \resumeSubHeadingListStart
@@ -90,7 +100,11 @@
 
   \resumeSubheading
     {Object Oriented Programming in C++}{Brooklyn, NY}
-    {Teaching Assistant for Professor Sterling}{Sep. 2017 -- Present}
+    {Teaching Assistant for Professor John Sterling}{Sep. 2017 -- Present}
+    \resumeItemListStart
+      \resumeItem{Grading}{Grading homework and labs that the students hand in.}
+      \resumeItem{Teaching/Tutoring}{Teaching labs and walking students through how to have good coding practices.}
+    \resumeItemListEnd
 
   \resumeSubheading
     {CoHouse}{Remote to CA}
@@ -102,28 +116,32 @@
 
   \resumeSubheading
     {Data Structures in Python3}{Brooklyn, NY}
-    {Teaching Assistant for Professor Iacono}{Jan. 2017 -- May 2017}
+    {Teaching Assistant for Professor John Iacono}{Jan. 2017 -- May 2017}
+    \resumeItemListStart
+      \resumeItem{Grading}{Created rubrics and graded homeworks and exams.}
+      \resumeItem{Teaching}{Taught labs and concepts behind data structures and sorting algorithms.}
+    \resumeItemListEnd
 
   \resumeSubheading
     {HULEDET}{Manhattan, NY}
     {Full-Stack Web Development Intern}{May 2016 -- Dec 2016}
     \resumeItemListStart
-      \resumeItem{PHP/Wordpress}{Full PHP backend refactor, creating actual models to interact with the database to easily regenerate objects}
-      \resumeItem{MySQL}{Refactor backend to work with PDO, to prevent against injection attacks with prepared statements}
+      \resumeItem{PHP/Wordpress}{Full PHP backend refactor, creating actual models to interact with the database to regenerate state}
+      \resumeItem{MySQL}{Refactored backend to work with PDO, to prevent against injection attacks with prepared statements}
     \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 \section{Projects}
 \resumeSubHeadingListStart
   \resumeSubheading
-    {justcats}{CTFD}
-    {Plugin for CTFD to display categories as challenges}{Sep. 2017}
+    {justcats}{CTFd}
+    {Plugin for CTFd to display categories as challenges}{Sep. 2017}
 
   \resumeSubheading
     {AD-Tooling}{OSIRIS Lab}
-    {Full Internal tool to interface with other Attack/Defense tools during AD style CTFs}{Sep. 2017 -- Present}
+    {Internal Webapp to interface with Attack/Defense tools}{Sep. 2017 -- Present}
     \resumeItemListStart
-      \resumeItem{Flask}{Python3 Flask Middleware, allows any import of python tooling and modules to be written, uses global pip on the box to distribute access to webserver models for query at any time.}
+      \resumeItem{Flask}{Python3 Flask Middleware, allows for ease of importing custom python modules, uses global pip on the box to distribute access to webserver models for query at any time.}
       \resumeItem{SQLAlchemy/MySQL}{MariaDB backend, JSON fields allow for easy packet parsing and querying.}
       \resumeItem{JSX/React}{Webpack and yarn to package manage and transpile JSX, React to display the tools and provide simple front-end configuration.}
     \resumeItemListEnd
@@ -132,29 +150,39 @@
     {notmycupofcoffee}{OSIRIS Lab}
     {CTF challenge focused on deserializing Java objects}{Sep. 2017}
     \resumeItemListStart
-      \resumeItem{JSP}{Java Server Pages, exemplified why storing state in frontend is a bad idea, and why debug mode should be turned off.}
-      \resumeItem{Maven}{Java's package manager, quite difficult to get to compile, but managed to pull the packages we needed and have the auto-solver in the same directory anyways.}
+      \resumeItem{JSP}{Java Server Pages, exemplified why storing state in frontend is a bad idea, and why debug mode is dangerous.}
     \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 \section{Skills}
 \resumeSubHeadingListStart
-  \resumeItem{Tooling}{}
-    \resumeItemListStart
-    \resumeItem{GDB}{Debugger for dynamic binary analysis}
-    \resumeItem{IDAPro}{Hexrays analysis of binary programs for ease of code reading}
-    \resumeItem{Binary Ninja}{Decompilation and visual representation of binary programs for ease of code reading}
-    \resumeItem{Wireshark}{pulling packets, analysis of packets in attempt to match its functionality and surpass it}
-    \resumeItemListEnd
+  \resumeItem{Tooling}{GDB, IDA Pro, Binary Ninja, Wireshark, Git, Docker, Vagrant}
+    % \resumeItemListStart
+    % \resumeItem{GDB}{Debugger for dynamic binary analysis}
+    % \resumeItem{IDA Pro}{Hexrays analysis of binary programs for ease of code reading}
+    % \resumeItem{Binary Ninja}{Decompilation and visual representation of binary programs for ease of code reading}
+    % \resumeItem{Wireshark}{pulling packets, analysis of packets in attempt to match its functionality and surpass it}
+    % \resumeItemListEnd
   \resumeItem{Languages}{Programming}
     \resumeItemListStart
     \resumeItem{Python3.5/3.6/2.7}{Flask applications, command-line scripts, pwntools, everyday menial tasks, TCP sockets}
     \resumeItem{Node.JS 6-7}{Web apps, TCP implementations of new web protocols, single page apps with webpack and React}
     \resumeItem{Bash/Zsh}{Everyday terminal usage, menial QOL scripts, avoiding usage of UIs when dealing with filesystems}
-    \resumeItem{\LaTeX}{Resumes and writeups for CTF challenges}
-    \resumeItem{C/C++}{TA and minor usage for writing challenges, Node Addons}
+    \resumeItem{\LaTeX}{Resumes, classwork, and writeups for CTF challenges}
+    \resumeItem{C/C++}{Minor usage for writing challenges, Node Addons, Teacher's Assistant}
     \resumeItem{HTML/CSS/SCSS}{Templating, basic styling, inlined scss with webpack}
     \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Education}
+
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {NYU Tandon School of Engineering}{New York, NY}
+    {Expected Bachelor of Science in Computer Science; GPA: 3.6}{Sep. 2016 -- May 2020}
+  \resumeSubheading
+    {Stuyvesant High School}{New York, NY}
+    {High School Diploma, GPA: 3.5}{Sep. 2012 -- Jun. 2016}
 \resumeSubHeadingListEnd
 
 \section{Relevant Coursework}

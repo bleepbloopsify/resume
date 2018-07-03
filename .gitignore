@@ -1,6 +1,6 @@
 */**
 !**.cls
-!**.tex
+!**/*.tex
 !**.pdf
 old/
 !.gitignore

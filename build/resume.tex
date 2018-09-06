@@ -56,7 +56,7 @@
 \newcommand{\resumeItem}[2]{
   \vspace{-1pt}
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+    \textbf{#1}{: #2 }
   }
 }
 
@@ -98,7 +98,18 @@
     {Cybersecurity Research Intern}{Jun. 2018 -- Sept. 2018}
     \resumeItemListStart
       \resumeItem{Sonar Rapid7}{Data ingestion and analysis of HTTP/S datasets}
+      \resumeItem{Lightspeed}{Industrial strength web crawler meant for identifying keywords within webpages.}
     \resumeItemListEnd
+  
+  \resumeSubheading
+    {VE International}{Remote to NY}
+    {Part-time freelance}{Jun. 2018 -- Aug. 2018}
+    \resumeItemListStart
+      \resumeItem{Single Sign-On}{Implemented the Oauth2.0 protocol using RFC 6749 and RFC 7009 for token revocation.}
+      \resumeItem{Third-party sign-in}{Interfaced with MSFT, Google, and Canvas LMS API to integrate third-party logins.}
+      \resumeItem{Canvas LMS API}{Attached hooks to webserver events to trigger controlled API actions.}
+    \resumeItemListEnd
+
   \resumeSubheading
     {OSIRIS Lab}{Brooklyn, NY}
     {Cybersecurity Research Lab}{Jan. 2017 -- Present}
@@ -134,6 +145,15 @@
 \section{Projects}
 \resumeSubHeadingListStart
   \resumeSubheading
+    {fileserver}{fileserver.bleepbloopsify.io}
+    {Platform to automatically update and host personal information and files}
+    {Sept. 2018 -- Present}
+    \resumeItemListStart
+      \resumeItem{Docker}{Containerized multiple nginx configurations for use in hosting and proxying the fileserver}
+      \resumeItem{Docker-Compose}{Container management system}
+      \resumeItem{Githooks}{Flask microserver to listen for githooks and update fileserver content}
+    \resumeItemListEnd
+  \resumeSubheading
     {ugo}{Binary Analysis}
     {Go decompiler plugin for IDA}{Sep. 2017 -- Dec. 2017}
     \resumeItemListStart
@@ -149,30 +169,14 @@
       \resumeItem{JSX/React}{Webpack and yarn to package manage and transpile JSX, React to display the tools and provide simple front-end configuration.}
     \resumeItemListEnd
 
-  \resumeSubheading
-    {notmycupofcoffee}{OSIRIS Lab}
-    {CTF challenge focused on deserializing Java objects}{Sep. 2017}
-    \resumeItemListStart
-      \resumeItem{JSP}{Java Server Pages, exemplified why storing state in frontend is a bad idea, and why debug mode is dangerous.}
-    \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-\section{Skills}
+\section{Languages}
 \resumeSubHeadingListStart
-  \resumeItem{Tooling}{GDB, IDA Pro, Binary Ninja, Wireshark, Git, Docker, Vagrant}
-    % \resumeItemListStart
-    % \resumeItem{GDB}{Debugger for dynamic binary analysis}
-    % \resumeItem{IDA Pro}{Hexrays analysis of binary programs for ease of code reading}
-    % \resumeItem{Binary Ninja}{Decompilation and visual representation of binary programs for ease of code reading}
-    % \resumeItem{Wireshark}{pulling packets, analysis of packets in attempt to match its functionality and surpass it}
-    % \resumeItemListEnd
-  \resumeItem{Languages}{Programming}
-    \resumeItemListStart
-    \resumeItem{Python}{Flask applications, command-line scripts, pwntools, everyday menial tasks, TCP sockets}
-    \resumeItem{JavaScript}{Web apps, TCP implementations of new web protocols, single page apps with webpack and React}
-    \resumeItem{Bash/Zsh}{Everyday terminal usage, menial QOL scripts, avoiding usage of UIs when dealing with filesystems}
-    \resumeItem{C/C++}{Minor usage for writing challenges, Node Addons, Teacher's Assistant}
-    \resumeItemListEnd
+  \resumeItem{Python}{Used for quick PoCs and small interactive scripts. Experience with multithreading and webservers.}
+  \resumeItem{Node.JS/JavaScript}{Webserver hosting/front-end UX/UI experience.}
+  \resumeItem{C/C++}{Familiarity with internals and code in this language. Object-oriented C++ experience.}
+  \resumeItem{Go}{Micro API services written to start easier goroutine-based tasks.}
 \resumeSubHeadingListEnd
 
 \section{Education}
@@ -186,17 +190,11 @@
     {High School Diploma, GPA: 3.5}{Sep. 2012 -- Jun. 2016}
 \resumeSubHeadingListEnd
 
-\section{Relevant Coursework}
+\section{Relevant Security Coursework}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Binary Analysis}{NYU}
       {Using dynamic and static algorithms to analyze binary programs.}{Sep. 2017 -- Present}
-    \resumeSubheading
-      {Data Structures and Algorithms in Python3}{NYU}
-      {Advanced structures and sorting/search algorithms}{Sep. 2016 -- Dec. 2016}
-    \resumeSubheading
-      {Object Oriented Programming in C++}{NYU}
-      {Basic coding principles and good programming practices}{Jan. 2017 -- May. 2017}
     \resumeSubheading
       {Computer Networking}{NYU Shanghai}
       {OSI model first four layers}{Jan. 2018 -- May. 2018}

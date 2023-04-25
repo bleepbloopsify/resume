@@ -1,5 +1,7 @@
 \documentclass[letterpaper,10pt]{article}
 
+\setlength{\footskip}{3.60004pt}
+
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -13,19 +15,6 @@
 
 \usepackage[familydefault,light]{Chivo} %% Option 'familydefault' only if the base font of the document is to be sans serif
 \usepackage[T1]{fontenc}
-
-% \usepackage[sfdefault]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font
-% \usepackage[T1]{fontenc}
-% \renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
-
-% \usepackage[light,math]{iwona}
-% \usepackage[T1]{fontenc}
-
-% \usepackage{GoMono}
-% \renewcommand*\familydefault{\ttdefault} %% Only if the base font of the document is to be typewriter style
-% \usepackage[T1]{fontenc}
-
-% \fontsize{5pt}{7pt}\selectfont
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -94,22 +83,39 @@
 \section{Experience}
 \resumeSubHeadingListStart
   \resumeSubheading
+    {Square Inc.}{New York City, NY}
+    {Mosec}{Aug. 2019 -- Present}
+    \resumeItemListStart
+      \resumeItem{Java}{Backend Engineer for cross-team java services}
+      \resumeItem{Mosec-Impact}{Work cross company to ensure that our low-level software requirements are met}
+      \resumeItem{SPEsim}{Work that allows the team to reverse engineer and attack a secure device from an attackers standpoint, but also reduces hardware costs}
+      \resumeItem{Manual Command Queue}{Designed, architected, and implemented a system that allows internal company researchers to access security information on devices}
+    \resumeItemListEnd
+  \resumeSubheading
+    {Square Inc.}{New York City, NY}
+    {Mosec Intern}{Jun. 2019 -- Aug. 2019}
+    \resumeItemListStart
+      \resumeItem{Mosec-Detections}{java engineer and iOS/Android developer}
+      \resumeItem{Android/iOS}{automated injection/debug management of esoteric mobile devies}
+    \resumeItemListEnd
+
+  \resumeSubheading
     {Cisco Umbrella}{San Francisco, CA}
     {Cybersecurity Research Intern}{Jun. 2018 -- Sept. 2018}
     \resumeItemListStart
-      \resumeItem{HTTP/S Datasets}{Engineered ingestor with Python and Go to process and index http banners.}
-      \resumeItem{Docker/Docker-Compose}{Used multiple }
-      \resumeItem{Web Crawler}{Architectured Promise-based Node.js web crawler to pull links off webpages indiscriminately.}
-      \resumeItem{TF-IDF}{Researched and developed word analysis algorithms of webpages to isolate relevant information from the site.}
+      \resumeItem{HTTP/S Datasets}{Data ingestor and pipeline management of large exported datasets}
+      \resumeItem{Docker/Docker-Compose}{from-scratch devops work to scale and maintain custom services for my team}
+      \resumeItem{Web Crawler}{JS based web crawler designed to beat captchas and pull page data for suspicious sites}
+      \resumeItem{TF-IDF}{statistical analysis of web pages to generate relevant groupings of sites using DNS data}
     \resumeItemListEnd
   
   \resumeSubheading
     {VE International}{Remote to NY}
     {Part-time freelance}{Jun. 2018 -- Aug. 2018}
     \resumeItemListStart
-      \resumeItem{Single Sign-On}{Created a microservice container-based system to host a single-sign on management service.}
-      \resumeItem{Third-party sign-in}{Integrated MSFT, Google, and Canvas LMS API as third-party signins}
-      \resumeItem{Canvas LMS API}{Attached hooks to webserver events to trigger controlled API actions.}
+      \resumeItem{Single Sign-On}{designed, architected, and implemented a custom oauth microservice}
+      \resumeItem{Third-party sign-in}{designed, architected, and implemented a self-service system to add third-party sign on systems.}
+      \resumeItem{Canvas LMS API}{designed, architected, and implemented a self-service hook based API on a third party software using plugins}
     \resumeItemListEnd
 
   \resumeSubheading
@@ -127,13 +133,13 @@
   %     \resumeItem{Teaching/Tutoring}{Basic concepts of good coding habits and principles of OOP}
   %   \resumeItemListEnd
 
-  \resumeSubheading
-    {CoHouse}{Remote to CA}
-    {Full-Stack web developer}{Jan. 2017 -- Aug. 2017}
-    \resumeItemListStart
-      \resumeItem{Django}{Created actions and endpoints for backend framework to manage cms}
-      \resumeItem{Google Scripts}{Wrote google scripts backend to manage excel sheets for CMS}
-    \resumeItemListEnd
+  % \resumeSubheading
+    % {CoHouse}{Remote to CA}
+    % {Full-Stack web developer}{Jan. 2017 -- Aug. 2017}
+    % \resumeItemListStart
+    %   \resumeItem{Django}{Created actions and endpoints for backend framework to manage cms}
+    %   \resumeItem{Google Scripts}{Wrote google scripts backend to manage excel sheets for CMS}
+    % \resumeItemListEnd
 
   % \resumeSubheading
   %   {Data Structures and Algorithms}{Brooklyn, NY}
@@ -148,22 +154,20 @@
 \section{Projects}
 \resumeSubHeadingListStart
   \resumeSubheading
-    {fileserver}{fileserver.bleepbloopsify.io}
-    {Platform to automatically update and host personal information and files}
-    {Sept. 2018 -- Present}
+    {CSAW CTF}{CSAW CTF Co-lead}
+    {CyberSecurity Awareness Worldwide CTF hosted by NYU Tandon.}
+    {2018-2019}
     \resumeItemListStart
-      \resumeItem{Docker}{Containerized multiple nginx configurations for use in hosting and proxying the fileserver}
-      \resumeItem{Docker-Compose}{Used docker-compose and several hardlinks/mounts to actually manage and host content}
-      \resumeItem{Githooks}{Wrote a flask microservice from scratch to pull git repos whenever they are updated (like my resume)}
+      \resumeItem{CTF}{Coordinated challenges and competitors together to create a quality CTF.}
+      \resumeItem{Infra}{co-designed, architected, and implemented a devops system to run CTFs at the push of a button}
     \resumeItemListEnd
   \resumeSubheading
     {ugo}{Binary Analysis}
-    {Go decompiler plugin for IDA}{Sep. 2017 -- Dec. 2017}
+    {Go decompiler plugin for IDA PRO}{Sep. 2017 -- Dec. 2017}
     \resumeItemListStart
       \resumeItem{IDAPython}{Attached to AST generated by IDA to change the way function calls were displayed.}
       \resumeItem{GoLang}{Researched the fundamentals of how go works (under the hood), how the calling convention, stack, etc. works.}
     \resumeItemListEnd
-
   \resumeSubheading
     {AD-Tooling}{OSIRIS Lab}
     {Internal tool to interface with Attack/Defense CTFs}{Sep. 2017 -- Present}
@@ -177,9 +181,10 @@
 
 \section{Languages}
 \resumeSubHeadingListStart
-  \resumeItem{Python}{Used for quick PoCs and small interactive scripts. Experience with multithreading and webservers.}
+  \resumeItem{Python, Ruby}{Used for quick PoCs and small interactive scripts. Experience with multithreading and webservers.}
+  \resumeItem{Java, golang}{Backend engineer working with many common Google packages }
   \resumeItem{Node.JS/JavaScript}{Scripting, frontend, backend, native applications.}
-  \resumeItem{C/C++}{Familiarity with internals and code in this language. Object-oriented C++ experience.}
+  \resumeItem{C/C++}{large experience writing command line tools in C, exploits in both languages, and rewriting programs to be more performant}
   \resumeItem{Go}{Micro API services written to start easier goroutine-based tasks.}
 \resumeSubHeadingListEnd
 

@@ -1,0 +1,174 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[bottom=1in, left=0.5in, right=0.5in]{geometry}
+
+\usepackage{tabularx}
+\usepackage{latexsym}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{adjustbox}
+\usepackage{multicol}
+\usepackage{lipsum} % for generating dummy text
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+\usepackage{adjustbox}
+\usepackage{needspace}
+\usepackage{tcolorbox}
+
+\setlength{\parindent}{0pt}
+
+\newcommand{\sectiontitle}[2]{%
+  \begin{tabularx}{\linewidth}{@{} X c @{}}
+    {\sffamily\textbf{#1}} & {\rmfamily\textit{#2}} \\ \hline
+  \end{tabularx}%
+  \vspace{3pt}%
+}
+\newcommand{\inlineimg}[2][width=0.4cm]{%
+  \begin{adjustbox}{raise=-0.2\height}%
+    \includegraphics[#1]{#2}%
+  \end{adjustbox}%
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt} % Remove the header line
+\fancyhead[C]{%
+  {\sffamily\LARGE\textbf{Leon Chou}, \rmfamily{Software Engineer}}
+  \vspace{6pt}
+  \hrule
+  \vspace{6pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} c c c c}
+    \faEnvelope{} \href{mailto:leon.chou@nyu.edu}{leon.chou@nyu.edu} &
+    \faPhone{} 917-691-0038 &
+    \faGithub{} \href{https://github.com/bleepbloopsify}{bleepbloopsify} &
+    \faLinkedin{} \href{https://www.linkedin.com/in/bleepbloopsify/}{bleepbloopsify}
+  \end{tabular*}
+}
+
+\setlength{\headheight}{40pt}
+
+\begin{document}
+
+% Calculate the width of the columns
+\newlength{\firstcolwidth}
+\newlength{\secondcolwidth}
+\setlength{\firstcolwidth}{\dimexpr(2\textwidth - 3\columnsep)/3\relax}
+\setlength{\secondcolwidth}{\dimexpr(\textwidth - \columnsep)/3\relax}
+
+\arrayrulecolor{blue}
+\setlength{\arrayrulewidth}{0.1pt}
+
+\begin{minipage}[t]{\firstcolwidth}
+  \sectiontitle{\inlineimg[width=11pt]{assets/skolem.png} Skolem Technologies}{Staff Engineer (2021-current)}
+  Hired as frontend engineer, promoted to full stack, and then to staff engineer after ~1 year. Owned a variety of projects, including:
+  \begin{itemize}[leftmargin=*,label=\faCaretRight,itemsep=2pt,topsep=0pt]
+    \item \textbf{Cloud infrastructure} - Designed, implemented, restructured, and maintained cloud infrastructure. This included ECS, Terraform configurations, and a CI/CD pipeline.
+    \item \textbf{WalletConnect execution pipeline} - Designed and implemented a pipeline for executing trades using the WalletConnect protocol. This included an OCaml backend, several MySQL tables, and several React/NextJS pages and components. Took our existing execution pipeline and augmented it to support a new protocol, and added accounting support across the board.
+    \item \textbf{Administrative pipeline} - Designed and implemented a pipeline for managing our users, organizations, and accounts. This included a permissioning system, a JS of OCaml (JSOO) / React frontend, and a separate stack within our OCaml backend for managing users, as well as new handlers for all key management functionality. Reduced several 2 hour manual administrative processes to a 2-click interface.
+    \item \textbf{Notification pipeline} - Designed, implemented, and maintain four separate pipelines for notifications, one through Zulip, one through Telegram, one through generated PDFs, and the final one through email.
+  \end{itemize}
+
+
+  \vspace{3pt}
+  \sectiontitle{\inlineimg[width=12pt]{assets/square.png} Square Inc. [Mobile Security]}{Software Engineer (2019-2020)}
+  Hired as an intern, promoted to full time out of college after ~3 months.
+  Worked on a team that was responsible for securing the Square mobile app.
+  Owned a variety of projects, including:
+  \begin{itemize}[leftmargin=*,label=\faCaretRight,itemsep=2pt,topsep=0pt]
+    \item \textbf{Differ (tooling)} Python library and executable to connect, apply rootkits, and fetch telemetry on Android devices. Used to detect malicious apps impersonating Square. Took a 2 developer week process and turned it into a 4 day automated process (with some babysitting).
+    \item \textbf{Backend} Maintained our existing Java backend to reduce round trips, upgrade cryptographic primitives, and augment existing detections. Went from ~4 round trips to 2 round trips for 75\% of our users.
+    \item \textbf{CI/CD} - Maintained and upgraded our existing CI/CD pipeline to support new features and reduce build times. Reduced a yearly upgrade process from 2 developer weeks to 4 hours of CI pipelining.
+  \end{itemize}
+
+  \vspace{3pt}
+  \sectiontitle{\inlineimg{assets/cisco.png} Cisco Umbrella [OpenDNS]}{Intern (2018)}
+  Hired as an intern for the summer. Worked as a data science engineer to identify fraud and abuse on the internet. Owned a variety of projects, including:
+  \begin{itemize}[leftmargin=*,label=\faCaretRight,noitemsep,topsep=0pt]
+    \item \textbf{NLP scraping} - Python and Golang large scale data pipelining to scrape and analyze data from the internet. Passed data to a machine learning pipeline for classification.
+  \end{itemize}
+\end{minipage}\hspace{\columnsep}
+\arrayrulecolor{orange}%
+\begin{minipage}[t]{\secondcolwidth}
+  \sectiontitle{\inlineimg{assets/github.png} Fish-planet}{2023}
+  Using OpenAI APIs, produced a distributed frontend (Vite + React + Typescript), backend (golang), terraform configuration, with protobufs, for a website that acts as an isolated fish tank.
+
+  \vspace{6pt}
+  \sectiontitle{\inlineimg{assets/github.png} Globlon}{OSS - OPAM 2022}
+  Contributed to the OCaml ecosystem, adding a new module for shell-based globbing.
+
+
+  \sectiontitle{\inlineimg{assets/github.png} AWS ARM SSM plugin}{2022}
+  Published an ARM / M1 release of the AWS SSM plugin for Terraform, in the absence of an official release.
+
+  \vspace{6pt}
+  \sectiontitle{\inlineimg{assets/ghidra.png} UGO Ghidra plugin}{2020}
+  Published a Ghidra plugin for decompiling and analyzing Go binaries.
+
+  \vspace{6pt}
+  \sectiontitle{\inlineimg{assets/vei.png} VE International}{2018,2019}
+  Implemented a Node.JS SSO backend and a CMS for VEI, a non-profit that teaches high school students about business.
+
+  \vspace{6pt}
+  \sectiontitle{CSAW CTF Lead}{2019, 2020}
+  Ran two CTFs for NYU
+
+  \vspace{6pt}
+  \sectiontitle{\inlineimg{assets/osirislab.jpeg} OSIRIS Security lab}{2016-2020}
+  Co-led a security research group at NYU. Organized, played, and ran CTFs, workshops, and talks.
+
+  \vspace{6pt}
+  \sectiontitle{\inlineimg{assets/huledet.png} HULEDET}{2016}
+  Acted as software engineer and CTO for HULEDET, a mailing list for birthday deals and freebies.
+
+  \vspace{1cm plus 1fill}
+  \arrayrulecolor{black}
+  \sectiontitle{Hobbies}{}
+    \inlineimg{assets/lichess.png} 1400 chess.com; 1700 lichess \\
+    \inlineimg{assets/steam.jpeg} 200+ hours in Factorio
+\end{minipage}
+
+\vfill
+
+\arrayrulecolor{red}
+\setlength{\arrayrulewidth}{0.1pt}
+
+\begin{multicols}{3}
+  \begin{minipage}[t]{\linewidth}
+    \sectiontitle{Tech stack}{}
+    \begin{tabularx}{\linewidth}{@{} X l @{}}
+      \inlineimg{assets/aws.png} AWS Cloud services                                     \\
+      \inlineimg{assets/react.png} React         & \inlineimg{assets/docker.png} Docker \\
+      \inlineimg{assets/terraform.png} Terraform & \inlineimg{assets/mysql.png} MySQL
+    \end{tabularx}
+  \end{minipage}
+  \begin{minipage}[t]{\linewidth}
+    \sectiontitle{Languages}{(this resume in \LaTeX)}
+    \begin{tabularx}{\linewidth}{@{} X l @{}}
+      \inlineimg{assets/javascript.png} Javascript & \inlineimg{assets/typescript.png} Typescript \\
+      \inlineimg{assets/golang.png} Golang         & \inlineimg{assets/python.jpeg} Python        \\
+      \inlineimg{assets/java.png} Java             & \inlineimg{assets/ocaml.png} Ocaml
+    \end{tabularx}
+  \end{minipage}
+  \begin{minipage}[t]{\linewidth}
+    \sectiontitle{Education}{BA Computer Science}
+    \begin{tabularx}{\linewidth}{@{} X l @{}}
+      \inlineimg{assets/nyu.png} New York University    & \textit{2016-2020} \\
+      \inlineimg{assets/stuyvesant.png} Stuyvesant H.S. & \textit{2012-2016}
+    \end{tabularx}
+  \end{minipage}
+\end{multicols}
+
+\needspace{1cm}
+\ifdim\pagetotal>\pagegoal\PackageError{Document}{Content exceeds one page}{Please adjust your content to fit within one page}\fi
+\end{document}

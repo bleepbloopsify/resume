@@ -1,5 +1,6 @@
 */**
 !**.cls
+.DS_STORE
 !**/*.tex
 !**.pdf
 old/
